@@ -1,0 +1,12 @@
+{
+  "name": "@response/html",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "LinusU/node-response",
+  "engines": {
+    "node": "^10.13.0 || ^12.13.0 || >=14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
