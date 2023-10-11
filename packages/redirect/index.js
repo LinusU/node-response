@@ -6,7 +6,7 @@ class RedirectResponse {
   }
 
   write (to) {
-    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': 0, 'Location': this.url })
+    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': '0', 'Location': this.url })
     to.end()
   }
 }

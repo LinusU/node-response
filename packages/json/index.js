@@ -7,7 +7,7 @@ class JsonResponse {
 
   write (to) {
     const data = Buffer.from(JSON.stringify(this.data))
-    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': data.byteLength })
+    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': String(data.byteLength) })
     to.end(data)
   }
 }

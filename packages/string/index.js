@@ -7,7 +7,7 @@ class StringResponse {
 
   write (to) {
     const data = Buffer.from(this.data, 'utf8')
-    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': data.byteLength })
+    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': String(data.byteLength) })
     to.end(data)
   }
 }

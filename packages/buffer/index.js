@@ -6,7 +6,7 @@ class BufferResponse {
   }
 
   write (to) {
-    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': this.data.byteLength })
+    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': String(this.data.byteLength) })
     to.end(this.data)
   }
 }

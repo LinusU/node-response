@@ -5,7 +5,7 @@ class EmptyResponse {
   }
 
   write (to) {
-    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': 0 })
+    to.writeHead(this.statusCode, { ...this.headers, 'Content-Length': '0' })
     to.end()
   }
 }
